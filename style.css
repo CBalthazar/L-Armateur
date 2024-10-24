@@ -1,0 +1,82 @@
+body {
+	margin: 0%;
+	padding: 0%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background-color: #44BBA4;
+	padding: 0%;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+nav {
+	background-color: blueviolet;
+	display: flex;
+	justify-content: end;
+	padding: 1% 2%
+}
+
+nav div {
+	background-color: black;
+	border: none;
+	text-decoration: none;
+	font-size: 1.75em;
+	font-family: 'Stardos Stencil';
+	text-align: center;
+	padding: 0.5% 1%;
+
+}
+
+nav div a {
+	color: white;
+	text-decoration: none;
+}
+
+nav div:hover {
+	background-color: #586f7c;
+	box-shadow: -0.1em .2em black;
+	transform: translateY(-0.2em);
+}
+
+main {
+	background-color: darkturquoise;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main div {
+	background-color: aquamarine;
+}
+
+footer {
+	text-align: center;
+	font-weight: 700;
+	background-color: #44BBA4;
+}
+
+.suggestion-banner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	background-color: #f8eac4;
+	width: 200px;
+	height: 200px;
+	border: black 1px solid;
+	border-radius: 10px;
+}
