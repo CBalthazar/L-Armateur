@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="connection.css">
+  <title>Connection</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>L'Armateur</h1>
+      <div><a href="connection.html">Connection Button</a></div>
+    </div>
+    <nav>
+      <div><a href="index.html">Accueil</a></div>
+      <div><a href="#">Explorer</a></div>
+      <div><a href="#">Favoris</a></div>
+      <div><a href="#">Notes</a></div>
+      <div><a href="#">Général</a></div>
+    </nav>
+  </header>
+  <main>
+    <form>
+      <button class="form-switch" type="button">
+        <div>Inscription</div>
+        <div>Connection</div>
+      </button>
+      <fieldset>
+        <div>
+          <label for="surname">Nom de Famille :</label>
+          <input type="text" name="surname" id="surname" pattern="[a-zA-Z.,'\-]{1,32}" required>
+          <div class="tooltip">
+            <span>Ne doit contenir que des lettres et les caractères spéciaux suivants: . , ' -</span>
+          </div>
+
+          <label for="firstname">Prénom :</label>
+          <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z.,'\-]{1,32}" required>
+          <div class="tooltip">
+            <span>Ne doit contenir que des lettres et les caractères spéciaux suivants: . , ' -</span>
+          </div>
+
+          <label for="pseudonyme">Pseudonyme :</label>
+          <input type="text" name="pseudonyme" id="pseudonyme">
+          <div class="tooltip">
+            <span>Par défaut, le site utilisera votre prénom</span>
+          </div>
+
+          <label for="mail">Adresse mail :</label>
+          <input type="text" name="mail" id="mail" pattern="^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" required>
+          <div class="tooltip">
+            <span>Veuillez respecter le foramt email. exemple: nom.prénom@place.com</span>
+          </div>
+
+          <label for="password">Mot de Passe :</label>
+          <input aria-describedby="passwordrules" type="text" name="password" id="password" required>
+          <div class="tooltip" id="passwordrules">
+            <p>Règles pour le mot de passe:</p>
+            <ul>
+              <li>8 caractères minimum</li>
+              <li>Doit inclure au moins une minuscule, une majuscule, un chiffre et un caractère spécial</li>
+              <li>Pour votre sécurité en ligne, préférez un mot de passe unique à ce site</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit">Envoyer</button>
+        </div>
+        <div>
+          <button type="reset">Réinitialiser</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <!-- text placeholder bc its fun-->
+    Mine website. mine precious. Khô-llum ! Khô-llum !
+  </footer>
+</body>
+
+</html>

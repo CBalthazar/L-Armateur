@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Al Balth'Art</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+    <title>L'Armateur</title>
 </head>
 
 <body>
     <header>
         <div>
-            <h1>Biz'Art</h1>
+            <h1>L'Armateur</h1>
+            <div>
+                <a href="connection.html">Connection Button</a>
+            </div>
         </div>
         <nav>
-            <div><a href="#">Accueil</a></div>
+            <div><a href="index.html">Accueil</a></div>
             <div><a href="#">Explorer</a></div>
             <div><a href="#">Favoris</a></div>
             <div><a href="#">Notes</a></div>
@@ -22,63 +26,100 @@
         </nav>
     </header>
     <main>
-        <div class="carroussel">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-            <img src="https://picsum.photos/100/100" alt="placeholder for Art Pieces">
-        </div>
-        <div class="description">
-            <p>WebPage Description</p>
-        </div>
-        <div class="suggestion-banner">
+
+        <!-- first banner with carroussel cards -->
+        <section class="banner">
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Assets/Tests/Joconde.jpg" alt="Placeholder">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                </div>
             </div>
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Assets/Tests/Starry Night.jpg" alt="Placeholder">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                </div>
             </div>
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Assets/Tests/Venus Birth.jpg" alt="Placeholder">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                </div>
             </div>
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Assets/Tests/BabelTower.jpg" alt="peinture de la tour de babel par Brueghel">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                </div>
             </div>
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Assets/Tests/dice-19.svg" alt="dés à 6 faces">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                </div>
             </div>
             <div class="card">
-                <picture>
-                    <!-- nothing here yet, unfinished -->
-                    <img src="https://picsum.photos/100/100" alt="">
-                </picture>
-                <h3>Titre de mes Cartes</h3>
+                <div class="imgbox">
+                    <img src="./Harmonie.jpg" alt="Placeholder">
+                </div>
+                <div class="description">
+                    <h3>Titre de mes Cartes</h3>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- second banner in which website will be described -->
+        <section class="banner">Banner 2</section>
+
+        <!-- third banner where exploration cards will be shown -->
+        <section class="banner">
+            <div class="card">
+                <div class="imgbox">
+                    <img src="./Assets/Tests/dice-19.svg" alt="dés à 6 faces">
+                </div>
+                <div class="description">
+                    <p>Aléatoire</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="./Assets/Tests/dice-19.svg" alt="groupe d'individus">
+                </div>
+                <div class="description">
+                    <p>Populaire</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgbox">
+                    <img src="./Assets/Tests/dice-19.svg" alt="Bulle de messagerie">
+                </div>
+                <div class="description">
+                    <p>Chat Général</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
+        <!-- bc why not, not meant to stay anyway-->
         Mine website. mine precious. Khô-llum ! Khô-llum !
     </footer>
 </body>

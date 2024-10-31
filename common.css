@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* colors */
+:root {
+    --main-bg-color: #586f7c;
+    --card-bg-color: #f8eac4;
+}
+
+/* element default styling */
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: #44BBA4;
+    padding: 0%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+header>nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+header>nav div {
+    background-color: black;
+    border: none;
+    text-decoration: none;
+    font-size: 1.75em;
+    font-family: 'Stardos Stencil';
+    text-align: center;
+    padding: 0.5% 1%;
+
+}
+
+header>nav div:hover {
+    background-color: #586f7c;
+    box-shadow: -0.1em .2em black;
+    transform: translate(.1em, -.2em);
+}
+
+header>nav div a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    background-color: darkturquoise;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    font-weight: 700;
+    background-color: #44BBA4;
+    padding: 1%;
+}
+
+.card {
+    background-color: #f8eac4;
+    width: 90%;
+    height: 400px;
+
+    padding: 5% 0%;
+
+    border: black 1px solid;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Affects images in cards so they take a specific space */
+.imgbox {
+    background-color: red;
+    position: relative;
+    width: 90%;
+    height: 50%;
+    flex: 0 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.description {
+    height: 100px;
+    background-color: #f8eac4;
+    padding: 5%;
+    font-size: 1em;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.description>p {
+    font-size: .8em;
+}
+
+@media screen and (min-width:600px) {
+    header div:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0% 2%
+    }
+
+    header>nav {
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding: 1% 2%
+    }
