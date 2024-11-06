@@ -1,0 +1,12 @@
+$main-color: bisque;
+$secondary-color: cadetblue;
+$text-color: black;
+
+$h2-size: 1.5em;
+
+@mixin default-text {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
