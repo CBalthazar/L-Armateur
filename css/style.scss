@@ -1,79 +1,7 @@
+@import "reset";
 @import "variables_mixins";
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-
-// RESET:
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
-
-body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
-
-/* 5. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
 
 .vblock {
-  background-color: darkkhaki;
   width: fit-content;
   height: 100%;
 
@@ -82,16 +10,15 @@ h6 {
 }
 
 .hblock {
-  background-color: khaki;
   width: 100%;
   height: fit-content;
 
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .text-block {
-  background-color: pink;
   width: 33%;
 
   display: flex;
@@ -144,20 +71,14 @@ header {
   h1 {
     font-size: 2em;
   }
-  font-size: 1em;
-
-  // to be removed
+  a {
+    color: white;
+  }
 
   & > div {
     @extend .hblock;
-
     justify-content: space-between;
-    font-size: 1em;
-    div {
-      background-color: black;
-      color: white;
-      margin: 0 1%;
-    }
+    padding: 0% 1%;
   }
 
   nav {
@@ -165,19 +86,26 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1%;
 
     text-align: center;
     list-style: none;
     text-decoration: none;
 
     div {
+      flex: 1;
+      background-color: black;
+      * {
+        color: white;
+      }
+
       display: flex;
       justify-content: center;
       text-align: center;
+
       &:hover,
       &:active {
         background-color: white;
+        color: black;
       }
     }
   }
@@ -206,7 +134,7 @@ main {
 
 @media screen and (min-width: 600px) {
   header {
-    h1 {
+    div {
       font-size: 1.5em;
     }
 
