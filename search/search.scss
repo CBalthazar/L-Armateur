@@ -1,0 +1,53 @@
+@import "../reset.css";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    background-color: aquamarine;
+    display: flex;
+  }
+
+  a div {
+    padding: 1em;
+
+    &:hover {
+      background-color: darken(aquamarine, 20);
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+
+  aside {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid black;
+
+    h2 {
+      font-size: 2em;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  section {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2em;
+      border-bottom: 1px solid black;
+    }
+  }
+}
