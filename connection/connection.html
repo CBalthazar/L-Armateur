@@ -9,8 +9,82 @@
 </head>
 
 <body>
-  <form action="post" method="post">
-  </form>
+  <header>
+    <div>
+      <h1>L'Armateur</h1>
+    </div>
+    <div>
+      <a href="#">
+        <div>
+          <p>Accueil</p>
+        </div>
+      </a>
+      <a href="../connection/connection.html">
+        <div>
+          <p>Connection</p>
+        </div>
+      </a>
+      <a href="http://">
+        <div>
+          <p>Explore</p>
+        </div>
+      </a>
+      <a href="http://">
+        <div>
+          <p>Favoris</p>
+        </div>
+      </a>
+      <a href="http://">
+        <div>
+          <p>Notes</p>
+        </div>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- log in side -->
+          <form action="post" method="post">
+            <div>
+              <label for="mail">Email :</label>
+              <input type="text" name="mail" id="mail">
+            </div>
+            <div>
+              <label for="password">Password :</label>
+              <input type="text" name="password" id="password">
+            </div>
+          </form>
+        </div>
+        <div class="flip-card-back">
+          <!-- sign in side -->
+          <form action="post" method="post">
+            <div>
+              <label for="name">Name :</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div>
+              <label for="surname">Surname :</label>
+              <input type="text" name="surname" id="surname">
+            </div>
+            <div>
+              <label for="mail">Email :</label>
+              <input type="text" name="mail" id="mail">
+            </div>
+            <div>
+              <label for="password">Password :</label>
+              <input type="text" name="password" id="password">
+            </div>
+            <div>
+              <label for="confirmation">Confirm</label>
+              <input type="text" name="confirmation" id="confirmation">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="connection.js"></script>
 </body>
 
