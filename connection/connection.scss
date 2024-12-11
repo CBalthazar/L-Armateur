@@ -1,0 +1,70 @@
+@import "../reset.css";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    background-color: aquamarine;
+    display: flex;
+  }
+
+  a div {
+    padding: 1em;
+
+    &:hover {
+      background-color: darken(aquamarine, 20);
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    div {
+      padding: 1em;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+      background-color: violet;
+      padding: 0.5em;
+      display: grid;
+      grid-template-areas: "lab inp";
+      gap: 1em;
+
+      label {
+        grid-area: lab;
+        background-color: white;
+      }
+      input {
+        grid-area: inp;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: darkgreen;
+}

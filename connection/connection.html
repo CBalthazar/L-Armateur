@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="connection.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>L'Armateur</h1>
+    </div>
+    <div>
+      <a href="../index/index.html">
+        <div>
+          <p>Accueil</p>
+        </div>
+      </a>
+      <a href="../connection/connection.html">
+        <div>
+          <p>Connection</p>
+        </div>
+      </a>
+      <a href="../search/search.html">
+        <div>
+          <p>Explore</p>
+        </div>
+      </a>
+      <a href="http://">
+        <div>
+          <p>Favoris</p>
+        </div>
+      </a>
+      <a href="../notes/notes.html">
+        <div>
+          <p>Notes</p>
+        </div>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div id="toggler">
+      <div class="selected">Connection</div>
+      <div>Inscription</div>
+    </div>
+    <!-- log in side -->
+    <form action="post" method="post" id="login">
+      <div>
+        <label for="mail">Email :</label>
+        <input type="text" name="mail" id="mail">
+      </div>
+      <div>
+        <label for="password">Password :</label>
+        <input type="text" name="password" id="password">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- sign in side -->
+    <form action="post" method="post" id="signin">
+      <div>
+        <label for="name">Name :</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="surname">Surname :</label>
+        <input type="text" name="surname" id="surname">
+      </div>
+      <div>
+        <label for="mail">Email :</label>
+        <input type="text" name="mail" id="mail">
+      </div>
+      <div>
+        <label for="password">Password :</label>
+        <input type="text" name="password" id="password">
+      </div>
+      <div>
+        <label for="confirmation">Confirm</label>
+        <input type="text" name="confirmation" id="confirmation">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <script src="connection.js"></script>
+</body>
+
+</html>
