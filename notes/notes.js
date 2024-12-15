@@ -1,5 +1,3 @@
-function mock_fetch() {}
-
 function newNote(text = "", title = "") {
   // make new note, delete current if exists
   newNotediv.innerHTML = "";
@@ -22,8 +20,9 @@ function newNote(text = "", title = "") {
 
 function loadNotes(container) {
   container.innerHTML = "";
-  let storedNotes = loadStorage("notes");
+  let storedNotes = loadStorage("notes", defaultObject);
   console.log(storedNotes);
+  //
   storedNotes[id].forEach((noteObject) => {
     let note = container.appendChild(document.createElement("div"));
     note.classList.add("note");
@@ -44,13 +43,13 @@ function saveNote() {
   note.title = textareas[0].value;
   note.text = textareas[1].value;
 
-  let storedNotes = loadStorage("notes");
+  let storedNotes = loadStorage("notes", defaultObject);
   storedNotes[id].push(note);
   localStorage.setItem("notes", JSON.stringify(storedNotes));
   loadNotes(notes);
 }
 
-function loadStorage(key) {
+function loadStorage(key, defaultObject) {
   try {
     let stored = JSON.parse(localStorage.getItem(key));
     if (stored) {
@@ -59,11 +58,11 @@ function loadStorage(key) {
   } catch (error) {
     console.log("Error while loading localStorage Data :\n" + error);
   }
-  return {};
+  return defaultObject;
 }
 
 // Code Execution
-localStorage.setItem("notes", "false"); //local rest, testing purposes, to be removed
+// localStorage.setItem("notes", "false"); //local rest, testing purposes, to be removed, change
 
 // Constants
 const main = document.querySelector("main");
@@ -74,6 +73,12 @@ const loadNoteBtn = document.querySelector(".load-note");
 const notes = document.querySelector(".notes");
 
 const id = "../Assets/Tests/Starry Night"; //for now, to change
+// set default result shape, to change maybe, I'll ask Marine
+let defaultObject = {};
+defaultObject[id] = [];
+
+loadNotes(notes);
+console.log("loading complete");
 
 // Binding buttons to events
 newNoteBtn.addEventListener("click", () => {
