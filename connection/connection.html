@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="connection.css">
+  <link rel="icon" type="../Assets/Tests/favicon.ico" href="../Assets/Tests/favicon.ico">
   <title>Document</title>
 </head>
 
@@ -13,7 +14,7 @@
     <div>
       <h1>L'Armateur</h1>
     </div>
-    <div>
+    <nav>
       <a href="../index/index.html">
         <div>
           <p>Accueil</p>
@@ -39,7 +40,7 @@
           <p>Notes</p>
         </div>
       </a>
-    </div>
+    </nav>
   </header>
   <main>
     <div id="toggler">
@@ -48,38 +49,32 @@
     </div>
     <!-- log in side -->
     <form action="post" method="post" id="login">
-      <div>
-        <label for="mail">Email :</label>
-        <input type="text" name="mail" id="mail">
-      </div>
-      <div>
-        <label for="password">Password :</label>
-        <input type="text" name="password" id="password">
-      </div>
+      <label for="mail">Email :</label>
+      <input type="text" name="mail" id="mail">
+
+      <label for="password">Password :</label>
+      <input type="text" name="password" id="password">
+
       <button type="submit">Submit</button>
     </form>
     <!-- sign in side -->
     <form action="post" method="post" id="signin">
-      <div>
-        <label for="name">Name :</label>
-        <input type="text" name="name" id="name">
-      </div>
-      <div>
-        <label for="surname">Surname :</label>
-        <input type="text" name="surname" id="surname">
-      </div>
-      <div>
-        <label for="mail">Email :</label>
-        <input type="text" name="mail" id="mail">
-      </div>
-      <div>
-        <label for="password">Password :</label>
-        <input type="text" name="password" id="password">
-      </div>
-      <div>
-        <label for="confirmation">Confirm</label>
-        <input type="text" name="confirmation" id="confirmation">
-      </div>
+
+      <label for="name">Name :</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="surname">Surname :</label>
+      <input type="text" name="surname" id="surname" required>
+
+      <label for="mail">Email :</label>
+      <input type="text" name="mail" id="mail" required>
+
+      <label for="password">Password :</label>
+      <input type="text" name="password" id="password" required>
+
+      <label for="confirmation">Confirm :</label>
+      <input type="text" name="confirmation" id="confirmation" required>
+
       <button type="submit">Submit</button>
     </form>
   </main>

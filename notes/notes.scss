@@ -1,26 +1,35 @@
-@import "../reset.css";
+@import "../commons/css/style.scss";
 
-body {
-  background-color: violet;
-  min-height: 100vh;
+main {
   display: flex;
-  flex-direction: column;
+
+  section {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-header {
+.button-div {
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  div {
-    background-color: aquamarine;
-    display: flex;
+.button {
+  padding: 1em;
+  background-color: gainsboro;
+  &:hover {
+    background-color: black;
+    color: white;
   }
+}
 
-  a div {
-    padding: 1em;
+.new-notes {
+  background-color: yellow;
+}
 
-    &:hover {
-      background-color: darken(aquamarine, 20);
-    }
-  }
+.notes {
+  background-color: crimson;
 }
