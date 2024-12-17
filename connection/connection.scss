@@ -10,9 +10,13 @@ main {
   div {
     cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     div {
-      padding: 1em;
+      background-color: black;
+      color: white;
+      padding: 0.5em;
     }
   }
 
@@ -49,6 +53,10 @@ main {
       padding: 1em;
       border: none;
       cursor: pointer;
+
+      &:hover {
+        background-color: darken(aquamarine, 20);
+      }
     }
   }
 }
@@ -59,6 +67,8 @@ main {
 
 .selected {
   background-color: aquamarine;
+  color: black;
+  padding: 1em;
 }
 
 @mixin message($color, $lightValue) {
