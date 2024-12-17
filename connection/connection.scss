@@ -1,28 +1,4 @@
-@import "../reset.css";
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-
-  div {
-    background-color: aquamarine;
-    display: flex;
-  }
-
-  a div {
-    padding: 1em;
-
-    &:hover {
-      background-color: darken(aquamarine, 20);
-    }
-  }
-}
+@import "../commons/css/style.scss";
 
 main {
   flex-grow: 1;
@@ -32,30 +8,54 @@ main {
   align-items: center;
 
   div {
+    cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
     div {
-      padding: 1em;
+      background-color: black;
+      color: white;
+      padding: 0.5em;
     }
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 25%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: max-content 2fr 1fr;
+    grid-gap: 1em;
 
-    div {
-      background-color: violet;
-      padding: 0.5em;
-      display: grid;
-      grid-template-areas: "lab inp";
-      gap: 1em;
+    label {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-      label {
-        grid-area: lab;
-        background-color: white;
+    input {
+      grid-column: span 2;
+      background-color: lightgray;
+      padding-left: 0.5em;
+      height: 2em;
+      border-radius: 10px;
+      border: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0px 1px grey;
       }
-      input {
-        grid-area: inp;
+    }
+
+    button {
+      grid-column: 2;
+      background-color: aquamarine;
+      padding: 1em;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(aquamarine, 20);
       }
     }
   }
@@ -66,5 +66,22 @@ main {
 }
 
 .selected {
-  background-color: darkgreen;
+  background-color: aquamarine;
+  color: black;
+  padding: 1em;
+}
+
+@mixin message($color, $lightValue) {
+  background-color: lighten($color, $lightValue);
+  padding: 0.5em 1em;
+  border: 2px dashed $color;
+  border-radius: 10px;
+}
+
+.info {
+  @include message(rgb(31, 151, 61), 50);
+}
+
+.warn {
+  @include message(orange, 30);
 }

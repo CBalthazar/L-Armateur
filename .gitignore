@@ -1,2 +1,4 @@
 # using scss maked css unnecessary
 *.css
+*.css.map
+tools
