@@ -12,42 +12,42 @@ function writeToJson(URL, content) {
   });
 }
 
-ArtPieces = [
+Artworks = [
   {
     id: 123456,
     title: "The Babel Tower",
     author: "Pieter Brueghel l'Ancien",
     date: "1563",
-    imageURL: "../Assets/Tests/BabelTower.jpg",
+    imageURL: "../Assets/images/BabelTower.jpg",
   },
   {
     id: 123457,
     title: "El Cargador de Flores",
     author: "Diego Rivera",
     date: "1935",
-    imageURL: "../Assets/Tests/Carador de flores.jpg",
+    imageURL: "../Assets/images/Carador de flores.jpg",
   },
   {
     id: 123458,
     title: "The Mona Lisa",
     author: "Léonard de Vinci",
     date: "1516", // inexact mais choix subjectif our simplifier
-    imageURL: "../Assets/Tests/Joconde.jpg",
+    imageURL: "../Assets/images/Joconde.jpg",
   },
   {
     id: 123459,
     title: "Praying Hands",
     author: "Albrecht Durer",
     date: "1508",
-    imageURL: "../Assets/Tests/Praying Hands.jpg",
+    imageURL: "../Assets/images/Praying Hands.jpg",
   },
   {
     id: 123460,
     title: "Starry Night",
     author: "Vincent Van Gogh",
     date: "1889",
-    imageURL: "../Assets/Tests/Starry Night.jpg",
+    imageURL: "../Assets/images/Starry Night.jpg",
   },
 ];
 
-writeToJson("./artpieces.json", ArtPieces);
+writeToJson("./artpieces.json", Artworks);

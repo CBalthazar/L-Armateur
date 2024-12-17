@@ -27,3 +27,25 @@ main {
     }
   }
 }
+
+.results {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.card {
+  height: 280px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-box {
+  flex-grow: 1;
+  background-size: cover;
+  background-position: center;
+}
