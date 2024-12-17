@@ -1,28 +1,4 @@
-@import "../reset.css";
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-
-  div {
-    background-color: aquamarine;
-    display: flex;
-  }
-
-  a div {
-    padding: 1em;
-
-    &:hover {
-      background-color: darken(aquamarine, 20);
-    }
-  }
-}
+@import "../commons/css/style.scss";
 
 main {
   flex-grow: 1;
@@ -39,24 +15,35 @@ main {
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 25%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
 
-    div {
-      background-color: violet;
-      padding: 0.5em;
-      display: grid;
-      grid-template-areas: "lab inp";
-      gap: 1em;
+    label {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-      label {
-        grid-area: lab;
-        background-color: white;
+    input {
+      background-color: lightgray;
+      padding-left: 0.5em;
+      height: 2em;
+      border-radius: 10px;
+      border: none;
+
+      &:focus {
+        outline: none;
+        border: 2px solid grey;
       }
-      input {
-        grid-area: inp;
-      }
+    }
+
+    button {
+      grid-column: span 2;
+      border: none;
+      background-color: aquamarine;
     }
   }
 }
@@ -66,5 +53,5 @@ main {
 }
 
 .selected {
-  background-color: darkgreen;
+  background-color: aquamarine;
 }

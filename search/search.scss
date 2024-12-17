@@ -1,28 +1,4 @@
-@import "../reset.css";
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-
-  div {
-    background-color: aquamarine;
-    display: flex;
-  }
-
-  a div {
-    padding: 1em;
-
-    &:hover {
-      background-color: darken(aquamarine, 20);
-    }
-  }
-}
+@import "../commons/css/style.scss";
 
 main {
   flex-grow: 1;

@@ -1,45 +1,11 @@
-// I wanted to see if recursive Darken would be clearer or darker than just multiplicative darken
-/* @function darkening1($color, $times) {
-  @if times == 1 {
-    @return darken($color, 20);
-  } @else {
-    @return darken(darkening1($color, $times -1), 20);
-  }
-} */
-
 @function darkening($color, $times) {
   @return darken($color, $times * 10);
 }
 
-@import "../reset.css";
+@import "../commons/css/style.scss";
 
 .testing {
   border: 1px solid black;
-}
-
-body {
-  background-color: violet;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-
-  div {
-    background-color: aquamarine;
-    display: flex;
-  }
-
-  a div {
-    padding: 1em;
-
-    &:hover {
-      background-color: darken(aquamarine, 20);
-    }
-  }
 }
 
 main {
