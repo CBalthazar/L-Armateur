@@ -53,7 +53,7 @@ async function mock_fetch(time) {
   if (!response.ok) {
     throw new Error("error while fetching data");
   }
-  const data = response.mock_json();
+  // const data = response.JSON(); //only needed for API call
   const results = document.querySelector(".results");
   appendCards(results, data);
 }

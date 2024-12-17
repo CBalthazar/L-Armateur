@@ -28,12 +28,19 @@ loginSubmitBtn.addEventListener("click", (event) => {
 
 signinSubmitBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  let inputs = document.querySelectorAll("#signin input");
-  console.log(inputs);
-  inputs.forEach((input) => {
-    console.log(input.name);
-    console.log(input.value);
-  });
+  let inputs = Array.from(document.querySelectorAll("#signin input"));
+  const emptyFields = inputs.filter((input) => !input.value.trim().length);
+
+  if (emptyFields.length) {
+    let div = main.appendChild(document.createElement("div"));
+    div.textContent =
+      "you missed the following fields : " +
+      emptyFields.map((input) => input.name).join(", ");
+    div.classList.add("warn");
+    return;
+  }
+
   let div = main.appendChild(document.createElement("div"));
   div.textContent = "we got you, you might receive an email soon, who nose";
+  div.classList.add("info");
 });

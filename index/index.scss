@@ -1,8 +1,8 @@
+@import "../commons/css/style.scss";
+
 @function darkening($color, $times) {
   @return darken($color, $times * 10);
 }
-
-@import "../commons/css/style.scss";
 
 .testing {
   border: 1px solid black;

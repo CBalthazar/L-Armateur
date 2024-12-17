@@ -8,7 +8,9 @@ main {
   align-items: center;
 
   div {
+    cursor: pointer;
     display: flex;
+
     div {
       padding: 1em;
     }
@@ -18,7 +20,7 @@ main {
     width: 25%;
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: max-content 2fr 1fr;
     grid-gap: 1em;
 
     label {
@@ -28,6 +30,7 @@ main {
     }
 
     input {
+      grid-column: span 2;
       background-color: lightgray;
       padding-left: 0.5em;
       height: 2em;
@@ -36,14 +39,16 @@ main {
 
       &:focus {
         outline: none;
-        border: 2px solid grey;
+        box-shadow: 0 0 0px 1px grey;
       }
     }
 
     button {
-      grid-column: span 2;
-      border: none;
+      grid-column: 2;
       background-color: aquamarine;
+      padding: 1em;
+      border: none;
+      cursor: pointer;
     }
   }
 }
@@ -54,4 +59,19 @@ main {
 
 .selected {
   background-color: aquamarine;
+}
+
+@mixin message($color, $lightValue) {
+  background-color: lighten($color, $lightValue);
+  padding: 0.5em 1em;
+  border: 2px dashed $color;
+  border-radius: 10px;
+}
+
+.info {
+  @include message(rgb(31, 151, 61), 50);
+}
+
+.warn {
+  @include message(orange, 30);
 }
