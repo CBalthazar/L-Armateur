@@ -1,6 +1,3 @@
-// Client Id : 338123372568216d96a3
-// Client Secret : e988efd6020a5de16a19b5ead953daf1
-
 const main = document.querySelector("main");
 
 /* async function connect(clientId, clientSecret){
