@@ -2,10 +2,10 @@ function newNote(text = "", title = "") {
   // make new note, delete current if exists
   newNotediv.innerHTML = "";
   const note = newNotediv.appendChild(document.createElement("div"));
-  const divTitle = document.createElement("div");
-  const divText = document.createElement("div");
-  const titleArea = divTitle.appendChild(document.createElement("textarea"));
-  const textArea = divText.appendChild(document.createElement("textarea"));
+  // const divTitle = document.createElement("div");
+  // const divText = document.createElement("div");
+  const titleArea = newNotediv.appendChild(document.createElement("textarea"));
+  const textArea = newNotediv.appendChild(document.createElement("textarea"));
 
   titleArea.setAttribute("placeholder", "Add Title...");
   textArea.setAttribute("placeholder", "Add Text...");
@@ -20,7 +20,10 @@ function newNote(text = "", title = "") {
 
 function loadNotes(container) {
   container.innerHTML = "";
-  let storedNotes = loadStorage("notes", defaultObject);
+  let storedNotes = loadStorage("notes", defaultObject) || [];
+  if (!storedNotes[id]) {
+    storedNotes[id] = [];
+  }
   console.log(storedNotes);
   //
   storedNotes[id].forEach((noteObject) => {
@@ -66,16 +69,20 @@ function loadStorage(key, defaultObject) {
 
 // Constants
 const main = document.querySelector("main");
+const artContainer = document.querySelector(".art-container");
 const newNotediv = document.querySelector(".new-note");
 const newNoteBtn = document.querySelector(".add-note");
 const saveNoteBtn = document.querySelector(".save-note");
 const loadNoteBtn = document.querySelector(".load-note");
 const notes = document.querySelector(".notes");
 
-const id = "../Assets/Tests/Starry Night"; //for now, to change
+const id = "../Assets/Images/BabelTower.jpg"; //for now, to change
 // set default result shape, to change maybe, I'll ask Marine
 let defaultObject = {};
 defaultObject[id] = [];
+
+const artwork = artContainer.appendChild(document.createElement("img"));
+artwork.setAttribute("src", id);
 
 loadNotes(notes);
 console.log("loading complete");
@@ -113,27 +120,3 @@ saveNoteBtn.addEventListener("keypress", (event) => {
     event.target.click();
   }
 });
-
-/* page at start:
-=> header:
-<>the Website Logo/Name
-<> all navigation buttons
-=> art piece on the left
-|> take the most space it can
-=> notes on the right
-=> initialise localStorage if no previous notes
-|> must load preexisting notes
-|> must show new notes on create
-=> buttons to make new notes
-
-// Events
-=> On Clicks
-  => new note
-    => make new emty note
-      => stylised text areas for 
-        => title
-        => text
-    => keep existing note in their right place
-  => load notes
-      => stylised card for each
-*/

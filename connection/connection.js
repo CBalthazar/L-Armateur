@@ -40,7 +40,7 @@ signinSubmitBtn.addEventListener("click", (event) => {
   inputs.forEach((input) => input.value.trim());
   const emptyFields = inputs.filter((input) => !input.value.length);
 
-  //currently fields order hardcoded cause no time, to change later
+  //currently fields order hardcoded cause no time, to modify
 
   // empty field verification
   if (emptyFields.length) {
@@ -53,7 +53,7 @@ signinSubmitBtn.addEventListener("click", (event) => {
   }
 
   // quick check for names
-  let validationRegex = /^[^0-9!@#$%^&*]+$/;
+  let validationRegex = /^[^0-9!@#$%^&*]{1,32}$/;
   for (let input of inputs.slice(0, 2)) {
     if (!input.value.match(validationRegex)) {
       let div = main.appendChild(document.createElement("div"));

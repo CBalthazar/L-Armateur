@@ -27,9 +27,25 @@ main {
 }
 
 .new-notes {
+  width: 100%;
   background-color: yellow;
+
+  .note {
+    width: 100%;
+  }
 }
 
 .notes {
   background-color: crimson;
+}
+
+.titleArea {
+  width: 100%;
+  font-size: 1.5em;
+  resize: none;
+}
+
+.textArea {
+  width: 100%;
+  resize: none;
 }

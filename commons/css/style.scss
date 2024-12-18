@@ -1,4 +1,5 @@
 @import "../../reset.css";
+$base-color: #44bba4;
 
 body {
   min-height: 100vh;
@@ -7,11 +8,12 @@ body {
 }
 
 header {
-  background-color: aquamarine;
+  background-color: $base-color;
   display: flex;
   flex-direction: column;
 
   div {
+    padding: 0em 1em;
     display: flex;
 
     h1 {
@@ -25,14 +27,57 @@ header {
     justify-content: flex-end;
   }
 
-  a div {
-    padding: 0.8em 2em;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 1px;
+  a {
+    div {
+      padding: 0.8em 2em;
+      font-size: 1.4em;
+      font-weight: 600;
+      letter-spacing: 1px;
 
-    &:hover {
-      background-color: darken(aquamarine, 20);
+      &:hover {
+        background-color: darken($base-color, 20);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    div {
+      h1 {
+        font-size: 3em;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover,
+      &:active {
+        background-color: darkcyan;
+      }
+
+      div {
+        padding: 0.5em;
+      }
     }
   }
 }
