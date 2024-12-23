@@ -19,7 +19,7 @@ function appendCards(domElement, data) {
   });
 }
 
-async function getArtworks(time) {
+async function getArtworks() {
   let response = await fetch("../artpieces.json");
 
   if (!response.ok) {
@@ -31,4 +31,4 @@ async function getArtworks(time) {
   appendCards(results, data);
 }
 
-getArtworks(Math.random() * 1000);
+getArtworks();
